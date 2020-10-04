@@ -28,6 +28,6 @@ public class LoginTest {
 		driver.findElement(By.xpath(XpathUtils.LoginModule.Username)).sendKeys("Admin");
 		driver.findElement(By.xpath(XpathUtils.LoginModule.Password)).sendKeys("admin123");
 		driver.findElement(By.xpath(XpathUtils.LoginModule.LoginBTN)).click();
-		System.out.println("Successfully Logged IN!!");
+		
 	}
 }
