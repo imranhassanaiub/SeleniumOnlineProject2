@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.bitm.SeleniumOnlineProject2.DataProvider.LoginDataProvider;
 import com.bitm.SeleniumOnlineProject2.Utils.DriverManager;
 import com.bitm.SeleniumOnlineProject2.Utils.UrlTextUtils;
 import com.bitm.SeleniumOnlineProject2.Utils.XpathUtils;
@@ -22,7 +23,7 @@ public class LoginTest {
 		System.out.println("Login Page Title Verified!");
 	}
 	
-	@Test(dependsOnMethods = "CheckLoginPageTitle")
+	@Test(dependsOnMethods = "CheckLoginPageTitle", dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
 	public void Logintest()
 	{
 		driver.findElement(By.xpath(XpathUtils.LoginModule.Username)).sendKeys("Admin");
