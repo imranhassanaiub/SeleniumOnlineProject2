@@ -1,10 +1,13 @@
 package com.bitm.SeleniumOnlineProject2.Test;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.bitm.SeleniumOnlineProject2.DTO.LoginDTO;
 import com.bitm.SeleniumOnlineProject2.DataProvider.LoginDataProvider;
 import com.bitm.SeleniumOnlineProject2.Utils.DriverManager;
 import com.bitm.SeleniumOnlineProject2.Utils.UrlTextUtils;
@@ -24,11 +27,16 @@ public class LoginTest {
 	}
 	
 	@Test(dependsOnMethods = "CheckLoginPageTitle", dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
-	public void Logintest()
+	public void Logintest(List<LoginDTO> logdata)
 	{
-		driver.findElement(By.xpath(XpathUtils.LoginModule.Username)).sendKeys("Admin");
-		driver.findElement(By.xpath(XpathUtils.LoginModule.Password)).sendKeys("admin123");
-		driver.findElement(By.xpath(XpathUtils.LoginModule.LoginBTN)).click();
+		for(LoginDTO login: logdata) 
+		{
+			driver.findElement(By.xpath(XpathUtils.LoginModule.Username)).sendKeys(login.getUsername());
+			driver.findElement(By.xpath(XpathUtils.LoginModule.Password)).sendKeys(login.getPassword());
+			driver.findElement(By.xpath(XpathUtils.LoginModule.LoginBTN)).click();
+			
+		}
+		
 		
 	}
 }

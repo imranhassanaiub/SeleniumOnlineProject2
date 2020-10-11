@@ -2,7 +2,6 @@ package com.bitm.SeleniumOnlineProject2.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,10 +22,15 @@ public class ExcelUtils {
 	private static Workbook workbook = null;
 
 	private static Sheet getSheet(int sheetNo) throws IOException {
-		// Get the file
+		// Get the file from locally
 		File f = new File("C:\\Users\\Imran\\Desktop\\data.xlsx");
 		inputStream = new FileInputStream(f);
 
+		//Get the file ftom project location
+		//File f = new File("src/main/java");
+		//File fs= new File(f, "data.xlsx");
+		//inputStream = new FileInputStream(new File(fs.getAbsolutePath()));
+		
 		// get workbook
 		workbook = new XSSFWorkbook(inputStream);
 		Sheet sheet = workbook.getSheetAt(sheetNo);
@@ -44,9 +48,9 @@ public class ExcelUtils {
 		Iterator<Row> rowiterator = ExcelUtils.getSheet(0).iterator();
 		while (rowiterator.hasNext()) {
 
-			Row nexRow = rowiterator.next();
+			Row nextRow = rowiterator.next();
 
-			Iterator<Cell> celliterator = nexRow.cellIterator();
+			Iterator<Cell> celliterator = nextRow.cellIterator();
 			LoginDTO login = new LoginDTO();
 			byte cellCounter = 0;
 			while (celliterator.hasNext()) {

@@ -5,6 +5,7 @@
     <classes>
       <class name="com.bitm.SeleniumOnlineProject2.Test.LoginTest">
         <methods>
+          <include name="Logintest" invocation-numbers="0"/>
           <include name="CheckLoginPageTitle"/>
         </methods>
       </class> <!-- com.bitm.SeleniumOnlineProject2.Test.LoginTest -->
