@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Default test</title>
+<title>TestNG:  AssignLeaveModuleTest</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Default test</h2><table border='1' align="center">
+<h2 align='center'>AssignLeaveModuleTest</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Oct 17 20:00:06 BDT 2020</td>
+<td>Started on:</td><td>Sun Oct 18 21:13:30 BDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16143 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3147 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bitm.SeleniumOnlineProject2.Test.LoginTest.Logintest()'><b>Logintest</b><br>Test class: com.bitm.SeleniumOnlineProject2.Test.LoginTest<br>Parameters: [LoginDTO [username=admin, password=admin123], LoginDTO [username=tutorial, password=tutorial]]</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[2]/input&quot;}
+<td title='com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest.assignleavetest()'><b>assignleavetest</b><br>Test class: com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest<br>Parameters: [AssignLeaveDTO [employeename=Cassidy Hope, leavetype=US - FMLA, fromdatemonth=Dec, fromdateyear=2020, fromdatedate=14, todatemonth=Dec, todateyear=2020, todatedate=19, comment=This is a test]]</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[3]/div[1]/div[2]/form/fieldset/ol/li[1]/input[1]&quot;}
   (Session info: chrome=86.0.4240.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;IMRAN-PC&apos;, ip: &apos;192.168.0.106&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Imran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:3677}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: a27ebdedaea10afb6236204dda5feacc
-*** Element info: {Using=xpath, value=/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[2]/input}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Imran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:4079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 42a4927b80c3ad0ccbe2857d798588dc
+*** Element info: {Using=xpath, value=/html/body/div[1]/div[3]/div[1]/div[2]/form/fieldset/ol/li[1]/input[1]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -99,46 +95,18 @@ Session ID: a27ebdedaea10afb6236204dda5feacc
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.bitm.SeleniumOnlineProject2.Test.LoginTest.Logintest(LoginTest.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at org.testng.TestRunner$$Lambda$54/1728790703.accept(Unknown Source)
+	at com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest.assignleavetest(AssignLeaveTest.java:36)
 	at java.util.ArrayList.forEach(ArrayList.java:1249)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1732663543", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1732663543'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[2]/input&quot;}
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace406749219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace406749219'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[3]/div[1]/div[2]/form/fieldset/ol/li[1]/input[1]&quot;}
   (Session info: chrome=86.0.4240.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;IMRAN-PC&apos;, ip: &apos;192.168.0.106&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Imran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:3677}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: a27ebdedaea10afb6236204dda5feacc
-*** Element info: {Using=xpath, value=/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[2]/input}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Imran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:4079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 42a4927b80c3ad0ccbe2857d798588dc
+*** Element info: {Using=xpath, value=/html/body/div[1]/div[3]/div[1]/div[2]/form/fieldset/ol/li[1]/input[1]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -153,7 +121,7 @@ Session ID: a27ebdedaea10afb6236204dda5feacc
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.bitm.SeleniumOnlineProject2.Test.LoginTest.Logintest(LoginTest.java:34)
+	at com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest.assignleavetest(AssignLeaveTest.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -166,7 +134,7 @@ Session ID: a27ebdedaea10afb6236204dda5feacc
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at org.testng.TestRunner$$Lambda$54/1728790703.accept(Unknown Source)
+	at org.testng.TestRunner$$Lambda$54/439904756.accept(Unknown Source)
 	at java.util.ArrayList.forEach(ArrayList.java:1249)
 	at org.testng.TestRunner.privateRun(TestRunner.java:764)
 	at org.testng.TestRunner.run(TestRunner.java:585)
@@ -184,8 +152,8 @@ Session ID: a27ebdedaea10afb6236204dda5feacc
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>4</td>
-<td>com.bitm.SeleniumOnlineProject2.Test.LoginTest@4e7dc304</td></tr>
+<td>0</td>
+<td>com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest@30a3107a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -195,10 +163,10 @@ Session ID: a27ebdedaea10afb6236204dda5feacc
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bitm.SeleniumOnlineProject2.Test.LoginTest.CheckLoginPageTitle()'><b>CheckLoginPageTitle</b><br>Test class: com.bitm.SeleniumOnlineProject2.Test.LoginTest</td>
+<td title='com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest.AssignLeavePage()'><b>AssignLeavePage</b><br>Test class: com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest</td>
 <td></td>
-<td>9</td>
-<td>com.bitm.SeleniumOnlineProject2.Test.LoginTest@4e7dc304</td></tr>
+<td>1</td>
+<td>com.bitm.SeleniumOnlineProject2.Test.AssignLeaveTest@30a3107a</td></tr>
 </table><p>
 </body>
 </html>

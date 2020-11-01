@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.bitm.SeleniumOnlineProject2.DTO.AssignLeaveDTO;
 import com.bitm.SeleniumOnlineProject2.DTO.LoginDTO;
 
 public class ExcelUtils {
@@ -82,7 +83,70 @@ public class ExcelUtils {
 		return logindata;
 	}
 
+	//AssignleaveTest
 	
+	public static List<AssignLeaveDTO> getAssignLeaveData() throws IOException {
+
+		List<AssignLeaveDTO> assignleavendata = new ArrayList<AssignLeaveDTO>();
+		DataFormatter formater = new DataFormatter();
+
+		Iterator<Row> rowiterator = ExcelUtils.getSheet(1).iterator();
+		while (rowiterator.hasNext()) {
+
+			Row nextRow = rowiterator.next();
+
+			Iterator<Cell> celliterator = nextRow.cellIterator();
+			AssignLeaveDTO assignleave = new AssignLeaveDTO();
+			byte cellCounter = 0;
+			while (celliterator.hasNext()) {
+				Cell cell = celliterator.next();
+
+				switch (cellCounter) {
+				case 0:
+					assignleave.setEmployeename(formater.formatCellValue(cell));
+					cellCounter++;
+					break;
+				case 1:
+					assignleave.setLeavetype(formater.formatCellValue(cell));
+					cellCounter++;
+					break;
+				case 2:
+					assignleave.setFromdatemonth(formater.formatCellValue(cell));
+					cellCounter++;
+					break;
+				case 3:
+                    assignleave.setFromdateyear(formater.formatCellValue(cell));
+                    cellCounter++;
+					break;
+				case 4:
+                    assignleave.setFromdatedate(formater.formatCellValue(cell));
+                    cellCounter++;
+					break;
+				case 5:
+                    assignleave.setTodatemonth(formater.formatCellValue(cell));
+                    cellCounter++;
+					break;
+				case 6:
+                    assignleave.setTodateyear(formater.formatCellValue(cell));
+                    cellCounter++;
+					break;
+				case 7:
+                    assignleave.setTodatedate(formater.formatCellValue(cell));  
+                    cellCounter++;
+					break;
+				case 8:
+                    assignleave.setComment(formater.formatCellValue(cell));                
+					break;
+				}
+			}
+
+			assignleavendata.add(assignleave);
+
+		}
+        close();
+		return assignleavendata;
+	}
+
 	
 	
 	
